@@ -1,0 +1,75 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background-image:url("h.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.loginbox{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 80vh;
+}
+
+#id{
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    color: black;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+input{
+    height: 45px;
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: black;
+    padding: 0 0 0 45px;
+    background: rgba(255,255,255,0.7);
+    font-family: 'popins',sans-serif ;
+    letter-spacing: 1px;
+}
+
+::-webkit-input-placeholder{
+    color: #000000;
+}
+
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 50%;
+    background: rgba(255,255,255,0.7);
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'popins',sans-serif ;
+    letter-spacing: 1px;
+}
+.submit:hover{
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}

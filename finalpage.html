@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>        YOUR SCHOOL COMMUNTIY     </title>
+  <style>
+   
+    .center{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .main{
+        text-align: center;
+        font-size: 25px;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+   
+  <script src="script.js"></script>
+</head>
+<body style="background-color: rgb(185, 235, 218);">
+    <div style="background-color: aqua;">
+    <h1 class="center" style="background-color: aqua;"> YOUR SCHOOL COMMUNTIY</h1>
+  <hr class="line"></div>
+
+  <p>DELHI PUBLIC SCHOOL,RISALI</p>
+
+  <p class="main">Upload your notes here and share with your classmates in this community</p>
+  <form style="text-align: center;">
+    <input type="file" id="myFile" name="filename"/>
+    <br><br>
+    <input type="text" id="description" placeholder="description of your notes" style="height: 200px;width: 400px;"/>
+    <button type="button" onclick="submit()">Submit</button>
+  </form>
+  <script>
+    function submit(){
+        console.log("form")
+        const file = document.getElementById("myFile").files[0];
+        const description = document.getElementById("description").value;
+        let data = sessionStorage.getItem("data") || new Array();
+        let formData = {
+            file: file,
+            description: description
+        }
+        data.push(formData);
+        sessionStorage.setItem("data", data);
+        alert("from submitted")
+    }
+  </script>
+  </body></html>
+
+  

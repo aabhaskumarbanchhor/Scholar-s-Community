@@ -1,0 +1,35 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>File Upload Example</title>
+</head>
+<body>
+  <form id="uploadForm">
+    <input type="file" id="fileInput">
+    <button type="submit">Upload</button>
+  </form>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var fileInput = document.getElementById('fileInput');
+      var file = fileInput.files[0];
+
+      if (file) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+          var fileContent = e.target.result;
+          sessionStorage.setItem('uploadedFile', fileContent);
+          console.log('File uploaded and saved in session storage.');
+        };
+
+        reader.readAsText(file);
+      }
+    });
+  </script>
+
+  
+</body>
+</html>
